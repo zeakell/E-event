@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c8bafaef-db8c-4a9e-9981-94ad210fc223">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM trans.TRANSACTIONS ORDER BY TIKETID DESC;]]>
+	</queryString>
+	<field name="TIKETID" class="java.lang.String"/>
+	<field name="EVENTID" class="java.lang.String"/>
+	<field name="EVENT_NAME" class="java.lang.String"/>
+	<field name="USERNAME" class="java.lang.String"/>
+	<field name="QTY" class="java.lang.Integer"/>
+	<field name="SUBTOTAL" class="java.lang.Integer"/>
+	<field name="TOTAL_PAY" class="java.lang.Integer"/>
+	<group name="TIKETID">
+		<groupExpression><![CDATA[$F{TIKETID}]]></groupExpression>
+	</group>
+	<group name="EVENTID">
+		<groupExpression><![CDATA[$F{EVENTID}]]></groupExpression>
+	</group>
+	<group name="EVENT_NAME">
+		<groupExpression><![CDATA[$F{EVENT_NAME}]]></groupExpression>
+	</group>
+	<group name="USERNAME">
+		<groupExpression><![CDATA[$F{USERNAME}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b7ed2151-3950-4897-8850-2a8fed1c3c4b" x="347" y="16" width="109" height="22"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="18"/>
+				</textElement>
+				<text><![CDATA[TIKET EVENT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="2466e677-ed49-4ec7-ae94-325485104102" x="347" y="0" width="100" height="35"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="15"/>
+				</textElement>
+				<text><![CDATA[TICKET KAMU]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="33d33453-e8fb-4914-8779-e7d4dd77381a" x="256" y="12" width="298" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="15"/>
+				</textElement>
+				<text><![CDATA[SELAMAT TIKET KAMU BERHASIL DICETAK]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="272" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ae051f0d-cfdf-4911-929f-429152555493" x="266" y="107" width="81" height="25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<text><![CDATA[USERNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b003c541-c342-41a6-b290-064a455bb0a7" x="266" y="42" width="81" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<text><![CDATA[EVENTID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="51598428-1875-4d45-94dc-6233ba48fa4f" x="266" y="12" width="81" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<text><![CDATA[EVENTNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2d6f5e1a-ab7f-453f-84a8-93e8a0ab982a" x="266" y="147" width="81" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<text><![CDATA[JUMLAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b61cfe93-1ae7-4029-b98b-8284f3d755e7" x="266" y="74" width="81" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<text><![CDATA[TICKETID]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="f2123bff-2c1a-4783-bd5d-0842f950ffe1" x="415" y="42" width="366" height="20"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EVENTID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3ea03a5d-aea4-4b3a-be17-15d8bedbd362" x="414" y="74" width="367" height="20"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TIKETID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f0074854-82d6-4720-ae02-f6fa5523af85" x="415" y="12" width="366" height="20"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EVENT_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6da03b99-ad5c-4583-abe8-1ec537513f91" x="415" y="147" width="366" height="20"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QTY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3b85b690-a621-47ff-963c-cc68938082ac" x="414" y="112" width="367" height="20"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{USERNAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9dbd4287-8b6a-42e1-8069-d734624fd949" x="266" y="181" width="91" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<text><![CDATA[TOTAL BAYAR]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b874a221-61a7-47d2-b391-9d782b646c59" x="414" y="181" width="367" height="20"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL_PAY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a4dcc8b8-4c4c-4cff-9a13-d9c29b65e00f" x="276" y="10" width="92" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="18"/>
+				</textElement>
+				<text><![CDATA[©Copyright]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8e9edc47-fb85-44c3-9f28-2dff9da0d30b" x="368" y="10" width="100" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="18"/>
+				</textElement>
+				<text><![CDATA[TicketSevent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f6f3c4cb-c58b-403d-a739-76cb3a36ca56" x="468" y="10" width="46" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Berlin Sans FB" size="18"/>
+				</textElement>
+				<text><![CDATA[2020]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="57" splitType="Stretch"/>
+	</summary>
+</jasperReport>

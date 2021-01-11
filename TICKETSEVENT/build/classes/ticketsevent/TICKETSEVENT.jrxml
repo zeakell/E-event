@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="34e60b33-ba5f-401f-b97f-ca5b802fcd97">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="46f2d655-00ad-49a3-99a7-bb2b27258eea" x="217" y="12" width="111" height="23"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="18"/>
+				</textElement>
+				<text><![CDATA[TIKET MASUK]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="86a7031f-47ec-4052-bbd8-42db3c568b1f" x="147" y="12" width="257" height="20"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="15"/>
+				</textElement>
+				<text><![CDATA[Selamat Tiket Kamu Berhasil Di Cetak]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="218" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="4557daaf-8e56-47bf-b392-387c3b122220" x="69" y="84" width="100" height="20"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<text><![CDATA[Nama Pemesan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e49029af-64ab-4148-9264-9554e7efbf63" x="69" y="124" width="100" height="20"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="132560a4-638e-42b5-b179-9d104a398722" x="74" y="13" width="95" height="20"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<text><![CDATA[ID Event]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="88cf52bb-ad7a-41c4-9967-423774b69b53" x="69" y="47" width="100" height="20"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<text><![CDATA[Nomor Tiket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bec72034-87f5-4c5f-9e7b-468dbbb9e4fa" x="69" y="162" width="100" height="20"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="13"/>
+				</textElement>
+				<text><![CDATA[Jumlah Tiket]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="142f934a-8b08-450a-a95e-bbb181fdcd13" x="315" y="13" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EVENTID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fe7cb04b-d38c-4ad1-9bb5-8d4411007b97" x="315" y="47" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TIKETID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6e6b7925-6225-440a-8857-c75a4dae01aa" x="315" y="84" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EVENT_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b4c14be4-2b64-4fdd-8397-987d5d863226" x="315" y="124" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5d7f7777-45b3-4bf2-bf0c-ae35178cf047" x="315" y="162" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="75" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
